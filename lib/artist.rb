@@ -32,4 +32,3 @@ class Artist
   
 end
 
-binding.'pry'
