@@ -16,7 +16,7 @@ class Artist
   end
   
   def songs
-     return @songs
+     Song.all.collect | 
   end
   
   def add_song_by_name(song_name)
