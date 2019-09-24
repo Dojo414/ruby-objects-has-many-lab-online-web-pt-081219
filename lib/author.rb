@@ -10,23 +10,23 @@ class Author
   
   def add_post(post_name)
     @posts << post_name
-    post.artist = self
-    @@song_count +=1
+    post_name.author = self
+    @@post_count +=1
   end
   
-  def songs
-     Song.all.find_all {|song| song.artist == self} 
+  def posts
+     Post.all.find_all {|posts| posts.author == self} 
   end
   
-  def add_song_by_name(song_name)
-    song = Song.new(song_name)
-    song.artist = self
-    @songs << song
-    @@song_count += 1 
+  def add_post_by_title(post_name)
+    new_post = Post.new(post_name)
+    new_post.author = self
+    @posts << new_post
+    @@post_count += 1 
   end
   
-  def self.song_count
-    @@song_count
+  def self.post_count
+    @@post_count
   end
   
 end
