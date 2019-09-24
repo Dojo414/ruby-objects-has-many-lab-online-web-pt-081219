@@ -16,7 +16,7 @@ class Artist
   end
   
   def songs
-     Song.all.collect | 
+     Song.all.collect {|song|  
   end
   
   def add_song_by_name(song_name)
